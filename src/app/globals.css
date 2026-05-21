@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #0A0A0A;
+  --color-foreground: #FAFAFA;
+  /* PIXSL Brand Colors */
+  --color-primary: #E8602A;
+  --color-primary-dark: #D94420;
+  --color-primary-light: #FF8A5C;
+  --color-secondary: #9CA3AF;
+  --color-border: #222222;
+  --color-card: #111111;
+  --color-card-alt: #141414;
+
+  --font-manrope: var(--font-manrope);
+  --font-playfair: var(--font-playfair);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0A0A0A;
+  --foreground: #FAFAFA;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Base resets or custom utilities */
+.glass {
+  background: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Section tag style */
+.section-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #E8602A;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Noise/Grain for premium gradients */
+.noise {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+@keyframes rotate-beam {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-rotate-beam {
+  animation: rotate-beam 4s linear infinite;
 }
