@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
+import { SOCIAL_LINKS } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -59,43 +60,42 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-2 lg:col-span-2">
-            <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Socials</h4>
-            <ul className="flex flex-col gap-4 text-sm text-gray-400">
-              <li>
-                <a href="#" className="hover:text-[#E8602A] transition">
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#E8602A] transition">
-                  Twitter / X
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#E8602A] transition">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#E8602A] transition">
-                  Dribbble
-                </a>
-              </li>
-            </ul>
-          </div>
+          {SOCIAL_LINKS.length > 0 && (
+            <div className="md:col-span-2 lg:col-span-2">
+              <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Socials</h4>
+              <ul className="flex flex-col gap-4 text-sm text-gray-400">
+                {SOCIAL_LINKS.map((social) => (
+                  <li key={social.href}>
+                    <a
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-[#E8602A] transition"
+                    >
+                      {social.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="md:col-span-4 lg:col-span-3">
             <h4 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Resources</h4>
             <ul className="flex flex-col gap-4 text-sm text-gray-400 mb-8">
+              <li>
+                <Link href="/work" className="hover:text-[#E8602A] transition">
+                  Case Studies
+                </Link>
+              </li>
               <li>
                 <Link href="/blog" className="hover:text-[#E8602A] transition">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/work" className="hover:text-[#E8602A] transition">
-                  Case Studies
+                <Link href="/about" className="hover:text-[#E8602A] transition">
+                  About
                 </Link>
               </li>
               <li>

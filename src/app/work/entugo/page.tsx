@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import CTABanner from "@/components/CTABanner";
 import { 
   ArrowUpRight, 
@@ -58,10 +59,25 @@ export default function EntugoCaseStudy() {
                 The <span className="text-[#FF8A5C]">Zero-Commission</span> <br />
                 Growth Engine
               </motion.h1>
-              <motion.p variants={fadeIn} className="text-xl text-gray-400 max-w-xl font-medium leading-relaxed mb-10">
+              <motion.p variants={fadeIn} className="text-xl text-gray-400 max-w-xl font-medium leading-relaxed mb-8">
                 Helping independent restaurants acquire new customers and turn them into loyal regulars without paying high aggregator commissions.
               </motion.p>
-              
+
+              <motion.div variants={fadeIn} className="flex flex-wrap gap-x-10 gap-y-6 mb-10">
+                <div>
+                  <div className="text-4xl font-playfair font-bold text-white leading-none">0%</div>
+                  <div className="text-gray-500 text-xs uppercase tracking-widest mt-2">Commission vs 30%</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-playfair font-bold text-white leading-none">100%</div>
+                  <div className="text-gray-500 text-xs uppercase tracking-widest mt-2">Data Ownership</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-playfair font-bold text-white leading-none">3</div>
+                  <div className="text-gray-500 text-xs uppercase tracking-widest mt-2">Connected Apps</div>
+                </div>
+              </motion.div>
+
               <motion.div variants={fadeIn} className="flex flex-wrap gap-4 mb-12">
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-gray-300">
                   <ShieldCheck className="w-4 h-4 text-[#E8602A]" />
@@ -416,6 +432,52 @@ export default function EntugoCaseStudy() {
               <div className="text-5xl md:text-7xl font-playfair font-bold text-white">€100<span className="text-[#E8602A]">k</span></div>
               <div className="text-[#FF8A5C] text-sm mt-4 font-bold tracking-[0.3em] uppercase">Pre-Seed Raise</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Companion case study + services */}
+      <section className="py-20 md:py-28 bg-[#0D0D0D] border-t border-white/5">
+        <div className="max-w-5xl mx-auto px-6">
+          <span className="section-tag mb-4 block">Keep Exploring</span>
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-10">
+            The rest of the ecosystem
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link
+              href="/work/tugo-eats"
+              className="group flex items-center justify-between gap-6 bg-[#111111] border border-[#222222] rounded-3xl p-8 hover:border-[#E8602A]/30 transition-all"
+            >
+              <div>
+                <div className="text-[#FF8A5C] text-xs font-bold uppercase tracking-widest mb-2">
+                  Companion case study
+                </div>
+                <div className="text-white text-xl font-bold leading-snug">
+                  Tugo Eats: the diner-facing app
+                </div>
+                <p className="text-gray-400 mt-2">
+                  The consumer app and physical-first loyalty mechanic.
+                </p>
+              </div>
+              <ArrowUpRight className="w-7 h-7 text-gray-500 group-hover:text-[#E8602A] group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all shrink-0" />
+            </Link>
+            <Link
+              href="/websites"
+              className="group flex items-center justify-between gap-6 bg-[#111111] border border-[#222222] rounded-3xl p-8 hover:border-[#E8602A]/30 transition-all"
+            >
+              <div>
+                <div className="text-[#FF8A5C] text-xs font-bold uppercase tracking-widest mb-2">
+                  The service behind it
+                </div>
+                <div className="text-white text-xl font-bold leading-snug">
+                  Web design &amp; build
+                </div>
+                <p className="text-gray-400 mt-2">
+                  How we design and ship products like this.
+                </p>
+              </div>
+              <ArrowUpRight className="w-7 h-7 text-gray-500 group-hover:text-[#E8602A] group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all shrink-0" />
+            </Link>
           </div>
         </div>
       </section>

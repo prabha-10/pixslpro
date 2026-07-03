@@ -14,7 +14,7 @@ const caseStudies = [
     category: "UX Case Study",
     description:
       "End-to-end UX for a web dashboard — from research to shipped product.",
-    href: "/portfolio/entugo",
+    href: "/work/entugo",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
   },
@@ -24,7 +24,7 @@ const caseStudies = [
     category: "UX Case Study",
     description:
       "Mobile food-ordering experience designed and built for everyday use.",
-    href: "/portfolio/tugo-eats",
+    href: "/work/tugo-eats",
     image:
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop",
   },

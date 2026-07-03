@@ -4,14 +4,36 @@ import AgentsProblem from "./AgentsProblem";
 import AgentsTypes from "./AgentsTypes";
 import AgentsProcess from "./AgentsProcess";
 import AgentsWhyUs from "./AgentsWhyUs";
+import AgentsValue from "./AgentsValue";
 import AgentsPricing from "./AgentsPricing";
 import FAQ from "@/components/FAQ";
 import CTABanner from "@/components/CTABanner";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
+
+const description =
+  "Custom AI agents for B2B service businesses — lead qualification, customer enquiries, internal automation, and process agents. Implemented in weeks. No hype. Just agents that work.";
 
 export const metadata: Metadata = {
-  title: "AI Agents for B2B Service Businesses | PIXSL",
-  description:
-    "Custom AI agents for B2B service businesses — lead qualification, customer enquiries, internal automation, and process agents. Implemented in weeks. No hype. Just agents that work.",
+  title: "AI Agents for B2B Service Businesses",
+  description,
+  alternates: { canonical: "/ai-agents" },
+  openGraph: {
+    title: "AI Agents for B2B Service Businesses",
+    description,
+    url: `${SITE_URL}/ai-agents`,
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "AI Agent Implementation",
+  serviceType: "AI agent development and automation",
+  url: `${SITE_URL}/ai-agents`,
+  description,
+  areaServed: "Worldwide",
+  provider: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
 };
 
 const agentFaqs = [
@@ -60,11 +82,13 @@ const agentFaqs = [
 export default function AIAgentsPage() {
   return (
     <div className="flex flex-col min-h-screen">
+      <JsonLd data={serviceSchema} />
       <AgentsHero />
       <AgentsProblem />
       <AgentsTypes />
       <AgentsProcess />
       <AgentsWhyUs />
+      <AgentsValue />
       <AgentsPricing />
       <FAQ headline="Questions About AI Agents" items={agentFaqs} />
       <CTABanner

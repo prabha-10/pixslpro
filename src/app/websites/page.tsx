@@ -5,14 +5,36 @@ import WebsitesSolution from "./WebsitesSolution";
 import WebsitesProcess from "./WebsitesProcess";
 import WebsitesIndustries from "./WebsitesIndustries";
 import WebsitesBeforeAfter from "./WebsitesBeforeAfter";
+import WebsitesValue from "./WebsitesValue";
 import WebsitesPricing from "./WebsitesPricing";
 import FAQ from "@/components/FAQ";
 import CTABanner from "@/components/CTABanner";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
+
+const description =
+  "Professional website design and redesign for B2B service businesses. Designed in Figma, built in 14 days. Brand identity, SEO, and mobile-optimised — included.";
 
 export const metadata: Metadata = {
-  title: "Website Design & Redesign for B2B Service Businesses | PIXSL",
-  description:
-    "Professional website design and redesign for B2B service businesses. Designed in Figma, built in 14 days. Brand identity, SEO, and mobile-optimised — included.",
+  title: "Website Design & Redesign for B2B Service Businesses",
+  description,
+  alternates: { canonical: "/websites" },
+  openGraph: {
+    title: "Website Design & Redesign for B2B Service Businesses",
+    description,
+    url: `${SITE_URL}/websites`,
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "B2B Website Design & Redesign",
+  serviceType: "Website design and redesign",
+  url: `${SITE_URL}/websites`,
+  description,
+  areaServed: "Worldwide",
+  provider: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
 };
 
 const websiteFaqs = [
@@ -56,12 +78,14 @@ const websiteFaqs = [
 export default function WebsitesPage() {
   return (
     <div className="flex flex-col min-h-screen">
+      <JsonLd data={serviceSchema} />
       <WebsitesHero />
       <WebsitesProblem />
       <WebsitesSolution />
       <WebsitesProcess />
       <WebsitesIndustries />
       <WebsitesBeforeAfter />
+      <WebsitesValue />
       <WebsitesPricing />
       <FAQ headline="Questions About Website Design" items={websiteFaqs} />
       <CTABanner

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import SplineScene from "@/components/SplineScene";
 
 const stats = [
   { value: "14", label: "Day Website Delivery" },
@@ -16,15 +15,11 @@ export default function Hero() {
   return (
     <section className="relative pt-48 md:pt-64 pb-12 overflow-hidden flex flex-col items-center justify-start min-h-screen bg-[#0A0A0A]">
       
-      {/* Background Spline Design */}
-      <div className="absolute inset-0 z-0 pointer-events-none flex items-start justify-center opacity-60 pt-20 md:pt-32">
-        <div className="w-full h-full max-w-[1400px] max-h-[800px] flex items-center justify-center">
-          <SplineScene scene="https://prod.spline.design/WWLWmkxHs0fXE34q/scene.splinecode" />
-        </div>
-      </div>
-
-      {/* Subtle Background Glows */}
-      <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#E8602A]/5 blur-[100px] rounded-full pointer-events-none z-0" />
+      {/* Background: static glows + grain (no WebGL — keeps the hero fast) */}
+      <div className="noise z-0" />
+      <div className="absolute top-[8%] left-1/2 -translate-x-1/2 w-[720px] h-[380px] bg-[#E8602A]/10 blur-[120px] rounded-full pointer-events-none z-0" />
+      <div className="absolute top-[34%] right-[10%] w-[420px] h-[420px] bg-[#FF8A5C]/10 blur-[140px] rounded-full pointer-events-none z-0" />
+      <div className="absolute bottom-[8%] left-[8%] w-[380px] h-[380px] bg-[#E8602A]/5 blur-[140px] rounded-full pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
         {/* Status Badge */}

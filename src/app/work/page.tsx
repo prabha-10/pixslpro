@@ -2,11 +2,20 @@ import type { Metadata } from "next";
 import PortfolioHero from "./PortfolioHero";
 import PortfolioGrid from "./PortfolioGrid";
 import CTABanner from "@/components/CTABanner";
+import { SITE_URL } from "@/lib/site";
+
+const description =
+  "Selected work from PIXSL — websites and AI agents designed in Figma and shipped in 10-14 days for B2B service businesses.";
 
 export const metadata: Metadata = {
-  title: "Portfolio | PIXSL — Websites & AI Agents for B2B Service Businesses",
-  description:
-    "Selected work from PIXSL — websites and AI agents designed in Figma and shipped in 10-14 days for B2B service businesses.",
+  title: "Our Work",
+  description,
+  alternates: { canonical: "/work" },
+  openGraph: {
+    title: "Our Work — PIXSL Case Studies & Projects",
+    description,
+    url: `${SITE_URL}/work`,
+  },
 };
 
 export default function PortfolioPage() {
