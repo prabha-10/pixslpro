@@ -2,21 +2,24 @@ import './globals.css';
 import '@benai/liquid-glass/styles.css';
 import { Agentation } from 'agentation';
 
-const TITLE = 'Web Design for UAE Home Automation Firms | Pixsl Studio';
+const TITLE = 'Web Design & Development Services | Pixsl Studio';
 const DESCRIPTION =
-  'Websites that win premium projects for UAE home automation and built-environment firms. Figma-first design, live in 10 to 14 days, from AED 4,000. Book a free call.';
+  'From idea to launched website in two weeks. Website design, development, and rescue on a fixed quote. You approve a working preview, then we build. Book a call.';
 
 export const metadata = {
   metadataBase: new URL('https://pixsl.pro'),
   title: TITLE,
   description: DESCRIPTION,
   keywords: [
-    'web design Dubai',
-    'website design UAE',
-    'website design for home automation companies',
-    'smart home company website',
-    'website redesign Dubai',
-    'ecommerce website Dubai',
+    'web design and development services',
+    'website design',
+    'web development',
+    'website rescue',
+    'website redesign',
+    'ecommerce website',
+    'custom software',
+    'website maintenance',
+    'portfolio website',
   ],
   alternates: { canonical: '/' },
   robots: { index: true, follow: true },
@@ -25,7 +28,7 @@ export const metadata = {
     description: DESCRIPTION,
     url: 'https://pixsl.pro',
     siteName: 'Pixsl Studio',
-    locale: 'en_AE',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
@@ -37,7 +40,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-AE">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://api.fontshare.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

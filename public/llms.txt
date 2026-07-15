@@ -1,0 +1,32 @@
+# Pixsl Studio
+
+Pixsl Studio offers web design and development services, custom software, and branding for owner-led businesses worldwide. From idea to launched website in two weeks, on a fixed quote, with a working preview you approve before we build.
+
+Website: https://pixsl.pro
+Contact: hello@pixsl.pro
+Founder: Prabha (reads and replies to every enquiry)
+
+## What we do
+- Website design and development: new Signature Websites, rescues and rebuilds of existing sites, and ecommerce stores with catalogue and checkout, on WordPress or Next.js. Mobile-first and search-ready.
+- Custom software and apps: client portals, dashboards, booking tools, and internal apps built around how your team works.
+- Branding and digital assets: logo, colours, type, and the social and profile assets that make a business recognisable everywhere.
+- Website care and hosting: managed hosting, maintenance with a set response window, content and gallery updates, and uptime and page-speed monitoring.
+
+## Pricing
+- Signature Website: from about AED 4,000 (roughly USD 1,100), most between AED 4,000 and 5,000.
+- Rescue, custom software, ecommerce, and care plans: quoted after a short call.
+- Every project starts with a fixed quote. No hourly billing, no surprise invoices.
+
+## Timeline
+- Live in 10 to 14 days for a website or rebuild, counted from the day you approve the working preview.
+
+## How we work (MVP-first)
+- You approve a real, clickable working preview, not a static mockup, before we build the full site.
+- You own everything at launch: domain, code, content, and accounts. No lock-in.
+
+## Where we work
+- Remote-first. We build for businesses across the Middle East, the UK, Europe, the US, India, and Southeast Asia.
+
+## Sister studios (separate brands)
+- Pixsl Flow: automation and AI agents.
+- Pixsl Rank: SEO and visibility.
