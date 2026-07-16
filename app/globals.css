@@ -467,7 +467,7 @@ section[id] { scroll-margin-top: 100px; }
 
 .hero {
   position: relative;
-  padding: 172px 0 96px;
+  padding: 172px 0 72px;
   overflow: hidden;
 }
 
@@ -578,7 +578,7 @@ section[id] { scroll-margin-top: 100px; }
 
 /* trusted-by strip inside hero bottom */
 .trusted {
-  margin-top: 96px;
+  margin-top: 72px;
   width: 100%;
   text-align: center;
 }
@@ -800,7 +800,7 @@ section[id] { scroll-margin-top: 100px; }
    ============================================================ */
 
 .stats {
-  padding: 96px 0;
+  padding: 72px 0;
 }
 .stats-grid {
   display: grid;
@@ -905,7 +905,7 @@ section[id] { scroll-margin-top: 100px; }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 96px 0 64px;
+  padding: 72px 0;
   overflow: hidden;
 }
 .services-top {
@@ -1034,7 +1034,7 @@ section[id] { scroll-margin-top: 100px; }
    ============================================================ */
 
 .projects {
-  padding: 96px 0;
+  padding: 72px 0;
 }
 .projects-grid {
   display: grid;
@@ -1101,7 +1101,7 @@ section[id] { scroll-margin-top: 100px; }
    ============================================================ */
 
 .process {
-  padding: 96px 0 0;
+  padding: 72px 0;
 }
 .process-grid {
   display: grid;
@@ -1259,7 +1259,7 @@ section[id] { scroll-margin-top: 100px; }
 
 /* dark CTA banner */
 .cta-banner {
-  margin-top: 96px;
+  margin-top: 72px;
 }
 .cta-banner .banner-inner {
   background: var(--dark);
@@ -1300,7 +1300,7 @@ section[id] { scroll-margin-top: 100px; }
    ============================================================ */
 
 .pricing {
-  padding: 96px 0;
+  padding: 72px 0;
 }
 .pricing-grid {
   display: grid;
@@ -1487,7 +1487,7 @@ section[id] { scroll-margin-top: 100px; }
    ============================================================ */
 
 .testimonials {
-  padding: 96px 0;
+  padding: 72px 0;
 }
 .testimonials-grid {
   columns: 3;
@@ -1547,7 +1547,7 @@ section[id] { scroll-margin-top: 100px; }
    ============================================================ */
 
 .whyus {
-  padding: 96px 0;
+  padding: 72px 0;
 }
 .compare-label {
   text-align: center;
@@ -1637,7 +1637,7 @@ section[id] { scroll-margin-top: 100px; }
    ============================================================ */
 
 .faqs {
-  padding: 96px 0;
+  padding: 72px 0;
 }
 .faq-body {
   display: grid;
@@ -1718,7 +1718,7 @@ section[id] { scroll-margin-top: 100px; }
    ============================================================ */
 
 .contact {
-  padding: 96px 0;
+  padding: 72px 0;
 }
 .contact-body {
   display: grid;
@@ -1858,7 +1858,7 @@ section[id] { scroll-margin-top: 100px; }
    ============================================================ */
 
 .blogs {
-  padding: 96px 0;
+  padding: 72px 0;
 }
 .blog-grid {
   display: grid;
@@ -1926,7 +1926,7 @@ section[id] { scroll-margin-top: 100px; }
    ============================================================ */
 
 .footer-cta {
-  padding: 120px 0 96px;
+  padding: 72px 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -2110,7 +2110,7 @@ footer.site-footer {
   .mini-cta { flex-direction: column; align-items: flex-start; }
   .form-row { grid-template-columns: 1fr; }
   .contact-info, .contact-form { padding: 28px 22px; }
-  .footer-cta { padding: 88px 0 64px; }
+  .footer-cta { padding: 64px 0; }
   .footer-grid { grid-template-columns: 1fr; gap: 36px; }
   .footer-news { grid-column: span 1; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }

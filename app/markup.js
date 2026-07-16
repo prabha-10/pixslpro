@@ -179,7 +179,7 @@ export const MARKUP = `
     </section>
 
     <!-- ============ 4. PROBLEM ============ -->
-    <section id="section-problem" style="padding:96px 0">
+    <section id="section-problem" style="padding:72px 0">
       <div class="container">
         <div class="section-head reveal">
           <h2>Your work is better<span class="dim">than your website makes it look.</span></h2>
@@ -1021,7 +1021,7 @@ export const MARKUP = `
     </section>
 
     <!-- ============ 14b. WHERE WE WORK + GROW INTO MORE ============ -->
-    <section id="section-reach" style="padding:96px 0">
+    <section id="section-reach" style="padding:72px 0">
       <div class="container">
         <div class="section-head reveal">
           <h2>Where we work.<span class="dim">Remote-first, worldwide.</span></h2>
