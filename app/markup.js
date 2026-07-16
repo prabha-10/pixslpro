@@ -184,11 +184,27 @@ export const MARKUP = `
         <div class="section-head reveal">
           <h2>Your work is better<span class="dim">than your website makes it look.</span></h2>
         </div>
-        <div class="reveal" style="max-width:680px;margin:0 auto;text-align:center;display:flex;flex-direction:column;gap:16px">
-          <p>You do great work. Then a prospect opens your website, and it looks cheaper than the projects you actually deliver.</p>
-          <p>So they hesitate. They compare you with a competitor who has a sharper site, and the job goes to the firm that looks more capable online, not the one that is.</p>
-          <p>A slow, dated, or thin site quietly costs you the projects you should be winning.</p>
-          <p>We fix the first impression: a fixed quote up front, and a working preview you approve before we build.</p>
+        <div class="process-grid">
+          <div class="card process-card reveal">
+            <span class="process-num">First impression</span>
+            <h3>Your site undersells you</h3>
+            <p>A prospect opens your website and it looks cheaper than the work you actually deliver.</p>
+          </div>
+          <div class="card process-card reveal" style="--d:.08s">
+            <span class="process-num">The comparison</span>
+            <h3>You lose to a sharper site</h3>
+            <p>They pick the competitor who looks more capable online, not the one who actually is.</p>
+          </div>
+          <div class="card process-card reveal">
+            <span class="process-num">The cost</span>
+            <h3>It adds up quietly</h3>
+            <p>A slow, dated, or thin site keeps costing you the projects you should be winning.</p>
+          </div>
+          <div class="card process-card reveal" style="--d:.08s">
+            <span class="process-num">The fix</span>
+            <h3>We turn it around</h3>
+            <p>A fixed quote up front and a working preview you approve before we build.</p>
+          </div>
         </div>
       </div>
     </section>
