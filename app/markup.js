@@ -187,7 +187,7 @@ export const MARKUP = `
         <div class="process-grid">
           <div class="card process-card reveal">
             <span class="prob-icon" style="width:44px;height:44px;border-radius:12px;background:var(--bg-soft);border:1px solid var(--bg-line);display:inline-flex;align-items:center;justify-content:center;color:var(--black)">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M1.5 10S4.5 4 10 4s8.5 6 8.5 6-3 6-8.5 6-8.5-6-8.5-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M1.5 10S4.5 4 10 4s8.5 6 8.5 6-3 6-8.5 6-8.5-6-8.5-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle class="prob-eye-pupil" cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>
             </span>
             <span class="process-num">First impression</span>
             <h3>Your site undersells you</h3>
@@ -195,7 +195,7 @@ export const MARKUP = `
           </div>
           <div class="card process-card reveal" style="--d:.08s">
             <span class="prob-icon" style="width:44px;height:44px;border-radius:12px;background:var(--bg-soft);border:1px solid var(--bg-line);display:inline-flex;align-items:center;justify-content:center;color:var(--black)">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6 3v14M6 3L3.5 5.5M6 3l2.5 2.5M14 17V3M14 17l-2.5-2.5M14 17l2.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path class="prob-cmp-a" d="M6 3v14M6 3L3.5 5.5M6 3l2.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path class="prob-cmp-b" d="M14 17V3M14 17l-2.5-2.5M14 17l2.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
             <span class="process-num">The comparison</span>
             <h3>You lose to a sharper site</h3>
@@ -203,7 +203,7 @@ export const MARKUP = `
           </div>
           <div class="card process-card reveal">
             <span class="prob-icon" style="width:44px;height:44px;border-radius:12px;background:var(--bg-soft);border:1px solid var(--bg-line);display:inline-flex;align-items:center;justify-content:center;color:var(--black)">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5l5 4 3-2 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 13h-4M17 13V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path class="prob-draw" pathLength="1" d="M3 5l5 4 3-2 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path class="prob-draw" pathLength="1" d="M17 13h-4M17 13V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
             <span class="process-num">The cost</span>
             <h3>It adds up quietly</h3>
@@ -211,7 +211,7 @@ export const MARKUP = `
           </div>
           <div class="card process-card reveal" style="--d:.08s">
             <span class="prob-icon" style="width:44px;height:44px;border-radius:12px;background:var(--bg-soft);border:1px solid var(--bg-line);display:inline-flex;align-items:center;justify-content:center;color:var(--accent)">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 10l2.5 2.5L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/><path class="prob-draw" pathLength="1" d="M6.5 10l2.5 2.5L14 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
             <span class="process-num">The fix</span>
             <h3>We turn it around</h3>

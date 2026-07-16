@@ -2131,3 +2131,61 @@ footer.site-footer {
   .phone-row { grid-template-columns: 96px 1fr; }
   .footer-cta h2 { font-size: 34px; }
 }
+
+/* ============================================================
+   Problem card animated icons
+   ============================================================ */
+.prob-icon svg { overflow: visible; }
+
+/* Eye: pupil scans across, as if judging your site */
+@keyframes prob-eye-scan {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  55% { transform: translateX(2px); }
+  80% { transform: translateX(0); }
+}
+.prob-eye-pupil {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: prob-eye-scan 3.2s ease-in-out infinite;
+}
+
+/* Compare: the two arrows weigh up and down against each other */
+@keyframes prob-cmp-up {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+@keyframes prob-cmp-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(2px); }
+}
+.prob-cmp-a {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: prob-cmp-up 1.8s ease-in-out infinite;
+}
+.prob-cmp-b {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: prob-cmp-down 1.8s ease-in-out infinite;
+}
+
+/* Draw: stroke draws in, holds, then erases (used for the cost trend and the fix check) */
+@keyframes prob-draw {
+  0% { stroke-dashoffset: 1; }
+  45% { stroke-dashoffset: 0; }
+  70% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -1; }
+}
+.prob-draw {
+  stroke-dasharray: 1;
+  animation: prob-draw 2.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prob-eye-pupil,
+  .prob-cmp-a,
+  .prob-cmp-b,
+  .prob-draw { animation: none; }
+  .prob-draw { stroke-dasharray: none; stroke-dashoffset: 0; }
+}
