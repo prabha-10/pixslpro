@@ -229,14 +229,14 @@ export const MARKUP = `
         </div>
         <div class="stats-grid">
           <div class="card stat-card reveal">
-            <span class="stat-value"><span class="count" data-to="500" data-suffix="+">0+</span></span>
-            <span class="stat-label">Successful projects delivered</span>
-            <p>We build high-impact websites and digital experiences for startups and enterprises to scale fast</p>
+            <span class="stat-value"><span class="count" data-to="12" data-suffix="+">0+</span></span>
+            <span class="stat-label">Websites delivered</span>
+            <p>New builds, rescues, and online stores for owner-led businesses, and counting.</p>
           </div>
           <div class="card stat-card reveal" style="--d:.08s">
-            <span class="stat-value"><span class="count" data-to="50" data-suffix="%">0%</span></span>
-            <span class="stat-label">Increased in conversion rate</span>
-            <p>Purpose-built digital experiences that elevate brands and increase conversion rates at every touchpoint.</p>
+            <span class="stat-value"><span class="count" data-to="90" data-suffix="+">0+</span></span>
+            <span class="stat-label">Mobile speed score</span>
+            <p>Fast, mobile-first builds, measured with Google PageSpeed on every launch.</p>
           </div>
           <div class="card stat-card cta-card reveal" style="--d:.16s">
             <h3>Let's build yours</h3>
@@ -244,53 +244,53 @@ export const MARKUP = `
             <a href="#section-contact" class="btn btn-red">Book a Free Call</a>
           </div>
           <div class="card stat-card reveal">
-            <span class="stat-value"><span class="count" data-to="50" data-prefix="$" data-suffix="M+">$0M+</span></span>
-            <span class="stat-label">Seed + series A funding</span>
-            <p>Through strategic design, marketing, and conversion optimization, we've helped businesses scale faster.</p>
-            <a class="stat-link" href="#section-testimonials">See our Awards
+            <span class="stat-value"><span class="count" data-to="100" data-suffix="%">0%</span></span>
+            <span class="stat-label">Yours at launch</span>
+            <p>Domain, code, content, and accounts, all in your name. No lock-in.</p>
+            <a class="stat-link" href="#section-process">See how we work
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
           <div class="card stat-card awards reveal" style="--d:.08s">
-            <span class="stat-value"><span class="count" data-to="10" data-suffix="+">0+</span></span>
-            <span class="stat-label">Awards recognition</span>
-            <p>Industry recognition of our best work, we are literally the best at our craft</p>
+            <span class="stat-value"><span class="count" data-to="6">0</span></span>
+            <span class="stat-label">Essentials in every build</span>
+            <p>Every project ships with these, included in the fixed quote.</p>
             <div class="awards-list">
               <div class="award-row">
                 <span class="award-name">
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2 5.5L16 6l-4.5 3.8L13 16l-5-3.2L3 16l1.5-6.2L0 6l6-.5L8 0z"/></svg>
-                  Site of the Day</span>
-                <span class="award-year">Award - 2025</span>
+                  Fixed quote</span>
+                <span class="award-year">Before we start</span>
               </div>
               <div class="award-row">
                 <span class="award-name">
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2 5.5L16 6l-4.5 3.8L13 16l-5-3.2L3 16l1.5-6.2L0 6l6-.5L8 0z"/></svg>
-                  Best UI/UX</span>
-                <span class="award-year">Award CS - 2022</span>
+                  Working preview</span>
+                <span class="award-year">Approve before build</span>
               </div>
               <div class="award-row">
                 <span class="award-name">
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2 5.5L16 6l-4.5 3.8L13 16l-5-3.2L3 16l1.5-6.2L0 6l6-.5L8 0z"/></svg>
-                  Site Honors Award</span>
-                <span class="award-year">FWA - 2024</span>
+                  Mobile-first build</span>
+                <span class="award-year">Every project</span>
               </div>
               <div class="award-row">
                 <span class="award-name">
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2 5.5L16 6l-4.5 3.8L13 16l-5-3.2L3 16l1.5-6.2L0 6l6-.5L8 0z"/></svg>
-                  Interaction Design Feature</span>
-                <span class="award-year">Behance - 2021</span>
+                  On-page SEO + analytics</span>
+                <span class="award-year">GA and GSC</span>
               </div>
               <div class="award-row">
                 <span class="award-name">
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2 5.5L16 6l-4.5 3.8L13 16l-5-3.2L3 16l1.5-6.2L0 6l6-.5L8 0z"/></svg>
-                  Award Name here</span>
-                <span class="award-year">Year of the Award</span>
+                  Lead capture form</span>
+                <span class="award-year">Straight to your inbox</span>
               </div>
               <div class="award-row">
                 <span class="award-name">
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l2 5.5L16 6l-4.5 3.8L13 16l-5-3.2L3 16l1.5-6.2L0 6l6-.5L8 0z"/></svg>
-                  Award Name here</span>
-                <span class="award-year">Year of the Award</span>
+                  You own everything</span>
+                <span class="award-year">No lock-in</span>
               </div>
             </div>
           </div>
@@ -496,8 +496,8 @@ export const MARKUP = `
             <p>You own everything: domain, code, content, and accounts. Stay on a care plan for hosting and updates, or take the keys, with no lock-in.</p>
             <div class="process-visual pv-scale">
               <div class="pv-metric">
-                <div class="m-val">90+</div>
-                <div class="m-label">Mobile speed score</div>
+                <div class="m-val">24/7</div>
+                <div class="m-label">Uptime monitoring</div>
               </div>
               <div class="pv-bars">
                 <i style="--h:22"></i><i style="--h:34"></i><i style="--h:28"></i><i style="--h:46"></i><i style="--h:58"></i><i class="hot" style="--h:72"></i><i class="hot" style="--h:92"></i>
