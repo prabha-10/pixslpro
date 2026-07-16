@@ -184,7 +184,7 @@ export const MARKUP = `
         <div class="section-head reveal">
           <h2>Your work is better<span class="dim">than your website makes it look.</span></h2>
         </div>
-        <div class="process-grid">
+        <div class="prob-grid">
           <div class="card process-card reveal">
             <span class="prob-icon" style="width:44px;height:44px;border-radius:12px;background:var(--bg-soft);border:1px solid var(--bg-line);display:inline-flex;align-items:center;justify-content:center;color:var(--black)">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M1.5 10S4.5 4 10 4s8.5 6 8.5 6-3 6-8.5 6-8.5-6-8.5-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle class="prob-eye-pupil" cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>

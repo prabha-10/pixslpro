@@ -2133,6 +2133,17 @@ footer.site-footer {
 }
 
 /* ============================================================
+   Problem cards: four across on desktop, collapsing down
+   ============================================================ */
+.prob-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1024px) { .prob-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .prob-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
    Problem card animated icons
    ============================================================ */
 .prob-icon svg { overflow: visible; }
