@@ -242,12 +242,45 @@ export default function Interactions({ markup }) {
       );
     });
 
-    // ---------- Contact form: service pill multi-select ----------
-    // Scoped to #servicePills: the currency switcher reuses .service-pills for its
-    // styling and must stay single-select.
-    document.querySelectorAll('#servicePills .pill-opt').forEach((pill) => {
-      pill.addEventListener('click', () => pill.classList.toggle('selected'), { signal });
+    // ---------- Contact form: service card single-select ----------
+    const svcCards = [...document.querySelectorAll('#servicePicker .svc-card')];
+    svcCards.forEach((card) => {
+      card.addEventListener(
+        'click',
+        () => svcCards.forEach((c) => c.classList.toggle('selected', c === card)),
+        { signal }
+      );
     });
+
+    // ---------- Contact form: multi-stage step toggle + progress stepper ----------
+    // Stepper has one extra leading node ("You found us") that is always complete,
+    // so panel index p maps to the active stepper node p + 1.
+    const formStepEls = [...document.querySelectorAll('.contact-form .form-step')];
+    const stepperNodes = [...document.querySelectorAll('.form-stepper .fs-step')];
+    if (formStepEls.length) {
+      const paintStepper = (p) => {
+        const activeNode = p + 1;
+        stepperNodes.forEach((node, n) => {
+          node.classList.toggle('fs-done', n < activeNode);
+          node.classList.toggle('fs-active', n === activeNode);
+        });
+      };
+      let stepIdx = Math.max(0, formStepEls.findIndex((s) => s.classList.contains('active')));
+      const showStep = (i) => {
+        stepIdx = Math.min(Math.max(i, 0), formStepEls.length - 1);
+        formStepEls.forEach((s, idx) => s.classList.toggle('active', idx === stepIdx));
+        paintStepper(stepIdx);
+      };
+      formStepEls.forEach((step) => {
+        step.querySelectorAll('[data-step-next]').forEach((b) =>
+          b.addEventListener('click', () => showStep(stepIdx + 1), { signal })
+        );
+        step.querySelectorAll('[data-step-back]').forEach((b) =>
+          b.addEventListener('click', () => showStep(stepIdx - 1), { signal })
+        );
+      });
+      paintStepper(stepIdx); // sync stepper with the initial panel
+    }
 
     return () => {
       ac.abort();

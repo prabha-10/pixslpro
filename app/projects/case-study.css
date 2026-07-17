@@ -1,0 +1,328 @@
+/* ============================================================
+   Case study template — /projects/[slug]
+   Layout from the "Project Case Study" design; tokens (colors,
+   type, radii, shadows, easing) come from globals.css.
+   ============================================================ */
+
+.cs-page { padding-top: 56px; }
+
+/* --- On-load fade for the header blocks (design's fadeUp) --- */
+@keyframes csFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+.cs-anim {
+  animation: csFadeUp 0.7s var(--ease) both;
+  animation-delay: var(--d, 0s);
+}
+@media (prefers-reduced-motion: reduce) {
+  .cs-anim { animation: none; }
+}
+
+/* --- Breadcrumb --- */
+.cs-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--gray-text);
+  transition: color 0.3s var(--ease);
+}
+.cs-back:hover { color: var(--accent); }
+.cs-back-ic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--bg-line);
+}
+
+/* --- Title row --- */
+.cs-title-row {
+  margin-top: 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.cs-title-copy { min-width: 0; }
+.cs-title-row h1 {
+  font-size: clamp(36px, 4.4vw, 52px);
+  line-height: 1.1;
+}
+.cs-sub {
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--gray-text);
+  max-width: 560px;
+  text-wrap: pretty;
+}
+/* Sits at the right end of the meta row */
+.cs-preview {
+  flex-shrink: 0;
+  height: 44px;
+  padding: 0 24px;
+  font-size: 14px;
+  margin-left: auto;
+  align-self: center;
+}
+
+/* --- Meta row --- */
+.cs-meta-row {
+  margin-top: 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px 48px;
+  flex-wrap: wrap;
+}
+.cs-meta { display: flex; align-items: flex-start; gap: 10px; }
+.cs-meta > svg { margin-top: 2px; flex-shrink: 0; color: var(--black); }
+.cs-meta-label { font-size: 12px; color: var(--gray-soft); }
+.cs-meta-value { font-size: 14px; font-weight: 600; color: var(--black); margin-top: 2px; }
+
+/* --- Hero media --- */
+.cs-hero-wrap { margin-top: 24px; }
+.cs-hero {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  aspect-ratio: 16 / 8.2;
+  background: linear-gradient(135deg, #e8eaee 0%, #f6f7f8 45%, #dfe2e7 100%);
+  box-shadow: var(--shadow-card);
+}
+/* Sized by HeroScale.js: rendered at a desktop viewport width, scaled down
+   to fill the hero exactly. The 100% values are the pre-JS fallback. */
+.cs-hero iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #fff;
+  transform-origin: 0 0;
+}
+.cs-domain {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  background: rgba(252, 252, 253, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--black);
+  box-shadow: var(--shadow-card);
+  transition: color 0.3s var(--ease);
+}
+.cs-domain:hover { color: var(--accent); }
+.cs-domain .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* --- Image slots --- */
+.cs-media {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8eaee, #f6f7f8 55%, #dfe2e7);
+}
+.cs-img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-size: cover;
+  background-position: center;
+}
+.cs-drop {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.cs-drop-name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(10, 10, 10, 0.35);
+}
+.cs-drop-hint {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 11.5px;
+  color: rgba(10, 10, 10, 0.32);
+}
+
+.cs-media-tall { aspect-ratio: 4 / 3.4; }
+.cs-media-card { aspect-ratio: 16 / 10; }
+.cs-band { aspect-ratio: 16 / 8; }
+.cs-wide { aspect-ratio: 21 / 9; }
+.cs-wide .cs-img { background-position: top center; }
+.cs-band-wrap { margin-top: 24px; }
+
+/* --- Text + image splits --- */
+.cs-split {
+  margin-top: 88px;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 24px;
+  align-items: start;
+}
+.cs-copy { padding-right: 24px; }
+.cs-copy h2 {
+  font-size: 22px;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+.cs-copy p { font-size: 15px; color: var(--gray-text); text-wrap: pretty; }
+.cs-copy p + p { margin-top: 14px; }
+
+.cs-split-rev { grid-template-columns: 1.15fr 1fr; }
+.cs-split-rev .cs-copy {
+  padding-right: 0;
+  padding-left: 24px;
+  position: sticky;
+  top: 40px;
+}
+.cs-stack { display: flex; flex-direction: column; gap: 24px; }
+
+/* --- Quote --- */
+.cs-quote { margin-top: 72px; }
+.cs-quote-inner { max-width: 460px; }
+.cs-quote-inner p { font-size: 15px; color: var(--gray-text); text-wrap: pretty; }
+.cs-quote-name {
+  margin-top: 20px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+.cs-quote-stat { font-size: 13.5px; color: var(--gray-soft); margin-top: 2px; }
+
+.cs-divider-wrap { margin-top: 72px; }
+.cs-divider { border-top: 1px solid var(--bg-line); }
+
+/* --- More projects --- */
+.cs-more { margin-top: 72px; }
+.cs-more h2 {
+  font-size: 32px;
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+.cs-more h2 .dim { color: var(--gray-soft); display: block; }
+/* Single auto-scrolling row: track holds two copies of the card set and
+   translates -50% (globals.css marquee keyframes); pauses on hover. */
+.cs-more-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+.cs-more-track {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  width: max-content;
+  padding-right: 24px; /* = gap, so the -50% loop is seamless */
+  animation: marquee 36s linear infinite;
+}
+.cs-more-marquee:hover .cs-more-track { animation-play-state: paused; }
+.cs-more-dup { display: contents; }
+@media (prefers-reduced-motion: reduce) {
+  .cs-more-track { animation: none; }
+  .cs-more-dup { display: none; }
+  .cs-more-marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+.cs-mp { width: 420px; flex-shrink: 0; }
+.cs-mp-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.cs-mp-name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+.cs-mp-view,
+.cs-more-all a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--gray-text);
+  transition: color 0.3s var(--ease);
+}
+.cs-mp-view:hover,
+.cs-more-all a:hover { color: var(--accent); }
+.cs-mp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.cs-mp-tag {
+  padding: 5px 13px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--bg-line);
+  background: var(--bg-soft);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-text);
+}
+.cs-mp-cover {
+  display: block;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 5 / 3.6;
+  border: 1px solid var(--bg-line);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.cs-mp-cover:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-pop);
+}
+.cs-more-all {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+.cs-more-all a { font-size: 14px; }
+
+/* --- Responsive --- */
+@media (max-width: 860px) {
+  .cs-split,
+  .cs-split-rev { grid-template-columns: 1fr; margin-top: 64px; }
+  .cs-copy,
+  .cs-split-rev .cs-copy { padding: 0; position: static; }
+  .cs-split-rev .cs-copy { order: -1; }
+  .cs-hero { aspect-ratio: 16 / 10; }
+}
+
+@media (max-width: 560px) {
+  .cs-page { padding-top: 40px; }
+  .cs-band { aspect-ratio: 16 / 10; }
+  .cs-wide { aspect-ratio: 16 / 9; }
+  .cs-mp { width: 300px; }
+}

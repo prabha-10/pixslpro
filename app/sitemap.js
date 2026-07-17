@@ -1,3 +1,5 @@
+import { PROJECTS } from './projects/data';
+
 export default function sitemap() {
   return [
     {
@@ -6,5 +8,11 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 1,
     },
+    ...Object.keys(PROJECTS).map((slug) => ({
+      url: `https://pixsl.pro/projects/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    })),
   ];
 }
